@@ -1,0 +1,22 @@
+site_nameWiki
+repo_url:
+nav:
+  - Home: index.md
+  - BTRFS:
+      - Overview: linux/btrfs/intro.md
+#theme: readthedocs
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+  palette:
+    scheme: default
+    primary: blue
+    accent: blue
+
+markdown_extensions:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
