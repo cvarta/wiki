@@ -1,8 +1,12 @@
-site_nameWiki
-repo_url:
+site_name: Chris Wiki
+site_description: Help in case of emergency
+site_author: Chris Huang
+
+repo_url: https://github.com/cvarta/wiki.git
 nav:
   - Home: index.md
-  - BTRFS:
+  - Linux:
+    - BTRFS:
       - Overview: linux/btrfs/intro.md
 #theme: readthedocs
 theme:
@@ -13,8 +17,8 @@ theme:
     - navigation.sections
   palette:
     scheme: default
-    primary: blue
-    accent: blue
+#    primary: blue
+#    accent: blue
 
 markdown_extensions:
   - pymdownx.emoji:

@@ -1,4 +1,4 @@
-# Welcome to Ch01.dev Wiki 
+# Welcome to Chris Wiki 
 
 Documentation is built using [mkdocs.org](https://www.mkdocs.org).
 
