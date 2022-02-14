@@ -24,8 +24,7 @@ jobs:
           python3 -m pip install --upgrade pip     # install pip
           python3 -m pip install mkdocs            # install mkdocs 
           python3 -m pip install mkdocs-material   # install material theme
-          python3 -m pip install mkdocs-material-extensions # install 
-          extensions for emoj support
+          python3 -m pip install mkdocs-material-extensions # install extensions for emoj support
 
       - name: Build site
         run: mkdocs build
