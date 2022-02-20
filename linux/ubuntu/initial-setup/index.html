@@ -17,7 +17,7 @@
     
     
       
-        <title>Overview - Chris Wiki</title>
+        <title>Initial Setup - Chris Wiki</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#butter-fs-introduction" class="md-skip">
+        <a href="#ubuntu" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Initial Setup
             
           </span>
         </div>
@@ -345,16 +345,14 @@
               
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
       
       
       
@@ -375,21 +373,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../btrfs/intro/" class="md-nav__link">
         Overview
       </a>
-      
     </li>
   
 
@@ -455,14 +443,16 @@
               
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" checked>
       
       
       
@@ -483,11 +473,86 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../ubuntu/initial-setup/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Initial Setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Initial Setup
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup-after-installation" class="md-nav__link">
+    Setup after Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup after Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intro" class="md-nav__link">
+    Intro
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-keyboard-layout" class="md-nav__link">
+    Setup Keyboard Layout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-wallpaper-carousel" class="md-nav__link">
+    Setup Wallpaper Carousel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-temperature-sensors" class="md-nav__link">
+    Setup Temperature Sensors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -526,6 +591,55 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup-after-installation" class="md-nav__link">
+    Setup after Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup after Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intro" class="md-nav__link">
+    Intro
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-keyboard-layout" class="md-nav__link">
+    Setup Keyboard Layout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-wallpaper-carousel" class="md-nav__link">
+    Setup Wallpaper Carousel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-temperature-sensors" class="md-nav__link">
+    Setup Temperature Sensors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -536,56 +650,31 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/cvarta/wiki.git/edit/master/docs/linux/btrfs/intro.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/cvarta/wiki.git/edit/master/docs/linux/ubuntu/initial-setup.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="butter-fs-introduction">Butter FS Introduction</h1>
-<p>Btrfs is a modern copy on write (CoW) filesystem for Linux aimed at implementing advanced features while also focusing on fault tolerance, repair and easy administration. Jointly developed at multiple companies, Btrfs is licensed under the GPL and open for contribution from anyone. Not too many companies have said that they are using Btrfs in production, but we welcome those who can say so on the production users page.</p>
-<h1 id="why-use-btrfs">Why use Btrfs</h1>
-<p>BtrFS filesystem in Linux provides the following Features and Capabilities</p>
-<ul>
-<li>Built-in copy on write</li>
-<li>Powerful snapshot capabilities</li>
-<li>Built-in volume management with subvolumes</li>
-<li>Massive Scalability upto 16 Exabytes</li>
-<li>Built-in data integrity (checksums)</li>
-<li>SSD optimization</li>
-<li>Compression capabilities</li>
-<li>RAID built in BtrFS</li>
-<li>Manual defragmentation</li>
-<li>Online filesystem management</li>
-<li>Data and metadata integrity</li>
-<li>In-place conversion from ext2/3/4 and ReiserFS</li>
-<li>Quota groups</li>
-<li>Online expansion and reduction of filesystem size</li>
-<li>Object level RAID</li>
-<li>Seeding devices</li>
-<li>Support for multiple devices</li>
-</ul>
-<h1 id="installation">Installation</h1>
-<h2 id="check-kernel-support">Check Kernel Support</h2>
-<p>Btrfs filesystem has been integrated into the kernel. To check currently supported filesystems by the kernel</p>
-<pre><code class="language-shell"># cat /proc/filesystems 
-nodev   sysfs
-nodev   rootfs
-..............
-   btrfs
-   ext3
-   ext2
-   ext4
-   vfat
-   xfs
-   fuseblk
-nodev   fuse
-nodev   fusectl
-</code></pre>
-<h2 id="install-btrfs-userspace-utilities">Install Btrfs Userspace Utilities</h2>
-<p>In order to create / format btrfs volumes the <code>btrfs-progs</code> needs to be installed. On Ubuntu 20.04 LTS: Open Terminal</p>
-<pre><code class="language-shell">sudo apt install btrfs-progs
-</code></pre>
+<h1 id="ubuntu">Ubuntu</h1>
+<h2 id="setup-after-installation">Setup after Installation</h2>
+<h3 id="intro">Intro</h3>
+<p>The following instructions have been written for Ubuntu 20.04 LTS. They may slightly or largely vary since Ubuntu went through a number of changes throughout the years.</p>
+<h3 id="setup-keyboard-layout">Setup Keyboard Layout</h3>
+<p>Adding a new keyboard option to Ubuntu Gnome is not very intuitive and can be rather frustrating for that reason.</p>
+<p>For example, one does not add a keyboard under <code>System Settings &gt; Keyboard</code></p>
+<p>Instead the option is located under <code>System Settings &gt; Personal &gt; Region &amp; Language &gt; Input Sources &gt; +</code></p>
+<p>When one clicks the <code>+</code> sign one will see a list of languages and this is where some confusion and frustration may ensue: This is NOT a list of keyboard options, so do not peruse this rather lengthy list looking for your desired keyboard option.</p>
+<p>Instead, click on the language you want. When you do that a new list will appear containing the list of keyboards available for that language.</p>
+<p>From that list click your selection then click the Add button.</p>
+<h3 id="setup-wallpaper-carousel">Setup Wallpaper Carousel</h3>
+<h3 id="setup-temperature-sensors">Setup Temperature Sensors</h3>
+<p>Install LM-Sensors and hddtemp.</p>
+<p>Download from the [Ubuntu Store] (https://apps.ubuntu.
+com/cat/applications/lm-sensors)  or install using apt</p>
+<p>sudo apt-get install lm-sensors hddtemp</p>
+<p>After installation start <code>sensors</code> in a terminal to start the detection of the on-board sensors</p>
+<p>sudo sensors-detect</p>
 
               
             </article>
@@ -599,7 +688,7 @@ nodev   fusectl
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../bash/file-handling/" class="md-footer__link md-footer__link--prev" aria-label="Previous: File Handling" rel="prev">
+        <a href="../../git/commit-messages/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Commit Messages" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -608,26 +697,11 @@ nodev   fusectl
               <span class="md-footer__direction">
                 Previous
               </span>
-              File Handling
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../git/commit-messages/" class="md-footer__link md-footer__link--next" aria-label="Next: Commit Messages" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
               Commit Messages
             </div>
           </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
         </a>
+      
       
     </nav>
   

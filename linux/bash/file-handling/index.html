@@ -17,7 +17,7 @@
     
     
       
-        <title>Overview - Chris Wiki</title>
+        <title>File Handling - Chris Wiki</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#butter-fs-introduction" class="md-skip">
+        <a href="#file-handling" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              File Handling
             
           </span>
         </div>
@@ -188,7 +188,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../bash/file-handling/" class="md-tabs__link md-tabs__link--active">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         Linux
       </a>
     </li>
@@ -296,14 +296,16 @@
               
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
       
       
       
@@ -324,11 +326,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../bash/file-handling/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         File Handling
       </a>
+      
     </li>
   
 
@@ -345,16 +357,14 @@
               
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
       
       
       
@@ -375,21 +385,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../btrfs/intro/" class="md-nav__link">
         Overview
       </a>
-      
     </li>
   
 
@@ -536,55 +536,24 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/cvarta/wiki.git/edit/master/docs/linux/btrfs/intro.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/cvarta/wiki.git/edit/master/docs/linux/bash/file-handling.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="butter-fs-introduction">Butter FS Introduction</h1>
-<p>Btrfs is a modern copy on write (CoW) filesystem for Linux aimed at implementing advanced features while also focusing on fault tolerance, repair and easy administration. Jointly developed at multiple companies, Btrfs is licensed under the GPL and open for contribution from anyone. Not too many companies have said that they are using Btrfs in production, but we welcome those who can say so on the production users page.</p>
-<h1 id="why-use-btrfs">Why use Btrfs</h1>
-<p>BtrFS filesystem in Linux provides the following Features and Capabilities</p>
+<h1 id="file-handling">File Handling</h1>
+<p>Linux/Unix files downloaded from the Internet usually are packaged and compressed for faster and more reliable file transfer. Files ending with tgz are known as tar-ball. If an archive is compressed with an external tool, the compression program adds its own suffix as usual, resulting in filename endings like</p>
 <ul>
-<li>Built-in copy on write</li>
-<li>Powerful snapshot capabilities</li>
-<li>Built-in volume management with subvolumes</li>
-<li>Massive Scalability upto 16 Exabytes</li>
-<li>Built-in data integrity (checksums)</li>
-<li>SSD optimization</li>
-<li>Compression capabilities</li>
-<li>RAID built in BtrFS</li>
-<li>Manual defragmentation</li>
-<li>Online filesystem management</li>
-<li>Data and metadata integrity</li>
-<li>In-place conversion from ext2/3/4 and ReiserFS</li>
-<li>Quota groups</li>
-<li>Online expansion and reduction of filesystem size</li>
-<li>Object level RAID</li>
-<li>Seeding devices</li>
-<li>Support for multiple devices</li>
+<li>".tar.z"</li>
+<li>".tar.gz"</li>
+<li>".tar.bz2"</li>
+<li>".tgz"</li>
 </ul>
-<h1 id="installation">Installation</h1>
-<h2 id="check-kernel-support">Check Kernel Support</h2>
-<p>Btrfs filesystem has been integrated into the kernel. To check currently supported filesystems by the kernel</p>
-<pre><code class="language-shell"># cat /proc/filesystems 
-nodev   sysfs
-nodev   rootfs
-..............
-   btrfs
-   ext3
-   ext2
-   ext4
-   vfat
-   xfs
-   fuseblk
-nodev   fuse
-nodev   fusectl
-</code></pre>
-<h2 id="install-btrfs-userspace-utilities">Install Btrfs Userspace Utilities</h2>
-<p>In order to create / format btrfs volumes the <code>btrfs-progs</code> needs to be installed. On Ubuntu 20.04 LTS: Open Terminal</p>
-<pre><code class="language-shell">sudo apt install btrfs-progs
+<p>To open such file type the following command at Linux shell prompt (GNU tar syntax):</p>
+<pre><code class="language-shell">$ tar -zxvf filename.tgz
+$ tar -zxvf filename.tar.gz
+$ tar -jxvf filename.tar.bz2gi
 </code></pre>
 
               
@@ -599,7 +568,7 @@ nodev   fusectl
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../bash/file-handling/" class="md-footer__link md-footer__link--prev" aria-label="Previous: File Handling" rel="prev">
+        <a href="../../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -608,20 +577,20 @@ nodev   fusectl
               <span class="md-footer__direction">
                 Previous
               </span>
-              File Handling
+              Home
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../git/commit-messages/" class="md-footer__link md-footer__link--next" aria-label="Next: Commit Messages" rel="next">
+        <a href="../../btrfs/intro/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Commit Messages
+              Overview
             </div>
           </div>
           <div class="md-footer__button md-icon">
