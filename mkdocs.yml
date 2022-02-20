@@ -10,6 +10,8 @@ nav:
         -  File Handling: linux/bash/file-handling.md
     - BTRFS:
       - Overview: linux/btrfs/intro.md
+    - Git:
+        - Commit Messages: linux/git/commit-messages.md
     - Ubuntu:
       - Initial Setup: linux/ubuntu/initial-setup.md
 #theme: readthedocs
