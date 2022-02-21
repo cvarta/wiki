@@ -37,11 +37,49 @@ Example `<scope>` values:
 The <scope> can be empty (e.g. if the change is a global or difficult to assign to a single component), in which case the parentheses are omitted. In smaller projects such as Karma plugins, the <scope> is empty.
 
 #### subject
+
+The first line cannot be longer than 70 characters, the second line is always blank and other lines should be wrapped at 80 characters. The type and scope should always be lowercase as shown below.
+
 Rules regarding`subject`:
 
 * use imperative, present tense (eg: use "add" instead of "added" or "adds")
 * don't use dot (`.`) at end
 * don't capitalize first letter
+
+#### message footer
+###### Referencing issues
+Closed issues should be listed on a separate line in the footer prefixed with "Closes" keyword like this:
+```shell
+Closes #234
+```
+or in the case of multiple issues:
+```shell
+Closes #123, #245, #992
+```
+###### Breaking changes
+All breaking changes have to be mentioned in footer with the description of 
+the change, justification and migration notes.
+
+```shell
+BREAKING CHANGE:
+
+`port-runner` command line option has changed to `runner-port`, so that it is
+consistent with the configuration file syntax.
+
+To migrate your project, change all the commands, where you use `--port-runner`
+to `--runner-port`.
+```
+
+### Examples
+
+```shell
+fix(middleware): ensure Range headers adhere more closely to RFC 2616
+
+Add one new dependency, use `range-parser` (Express dependency) to compute
+range. It is more well-tested in the wild.
+
+Fixes #2310
+```
 
 ---
 # References
