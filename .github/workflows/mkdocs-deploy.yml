@@ -1,4 +1,5 @@
 # Gratefully borrowed from https://github.com/marketplace/actions/deploy-mkdocs
+# Notes available at https://birtony.medium.com/setting-up-automated-release-workflow-with-github-actions-628dbca2446e
 name: Build and Deploy mkdocs to github pages
 on:
   push:
